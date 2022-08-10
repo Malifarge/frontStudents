@@ -20,7 +20,7 @@ const Home = () =>{
             <h1>Home</h1>
         <ul>
             {students.map(student =>{
-                return <li>{student.name}</li>
+                return <li key={student.name}>{student.name}</li>
             })}
         </ul>
         </section>

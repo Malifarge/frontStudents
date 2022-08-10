@@ -1,8 +1,10 @@
 import { useState } from "react";
+import {useNavigate} from 'react-router-dom' 
 
 const Form = () =>{
 
     const [name, setName] = useState("")
+    const navigate = useNavigate()
 
     const handleChange = e =>{
         setName(e.target.value);
@@ -27,9 +29,8 @@ const Form = () =>{
         })
     
         const response = await request.json()
+        navigate(`/success/${response.name}`)
 
-        
-        
       }
 
     return ( 

@@ -1,9 +1,17 @@
-
+import { useParams } from "react-router-dom"
 
 const Success = () =>{
+
+    const Studentname = useParams()
+
     return ( 
-        
-        <h1>Success</h1>
+
+        <section>
+            <h1>Success</h1>
+
+            <p>Congratulations, you have added {Studentname.name} to the list of students</p>
+
+        </section>
     )
 }
 
